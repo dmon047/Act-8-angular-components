@@ -1,0 +1,29 @@
+<div>
+  <h2>Simple Calculator</h2>
+
+  <!-- Form -->
+  <form>
+      <div>
+          <label for="num1">Number 1:</label>
+          <input id="num1" type="number" [(ngModel)]="num1" name="num1" placeholder="Enter first number" />
+      </div>
+
+      <div>
+          <label for="num2">Number 2:</label>
+          <input id="num2" type="number" [(ngModel)]="num2" name="num2" placeholder="Enter second number" />
+      </div>
+
+      <div>
+          <button type="button" (click)="add()">Add</button>
+          <button type="button" (click)="subtract()">Subtract</button>
+          <button type="button" (click)="multiply()">Multiply</button>
+          <button type="button" (click)="divide()">Divide</button>
+      </div>
+  </form>
+
+  <!-- Display result -->
+  <div *ngIf="result !== null">
+      <h3>Result:</h3>
+      <p>{{ result }}</p>
+  </div>
+</div>
