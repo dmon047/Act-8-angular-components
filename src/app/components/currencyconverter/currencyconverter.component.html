@@ -1,0 +1,19 @@
+<div>
+  <h2>Currency Converter (USD to PHP)</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="convertToPHP()">
+      <div>
+          <label for="amountUSD">Enter amount in USD:</label>
+          <input id="amountUSD" type="number" [(ngModel)]="amountUSD" name="amountUSD" placeholder="Enter amount in USD" required />
+      </div>
+
+      <button type="submit">Convert to PHP</button>
+  </form>
+
+  <!-- Display converted amount -->
+  <div *ngIf="amountPHP !== null">
+      <h3>Amount in PHP:</h3>
+      <p>{{ amountPHP | number: '1.2-2' }} PHP</p>
+  </div>
+</div>
