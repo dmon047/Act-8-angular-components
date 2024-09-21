@@ -1,0 +1,21 @@
+<div class="url-input-container">
+  <h2>BookMark List Display</h2>
+
+  <form>
+      <div>
+          <label for="url">Enter URL:</label>
+          <input type="text" id="url" [(ngModel)]="urlInput" name="url" placeholder="Enter a valid URL (e.g., https://example.com)" />
+      </div>
+
+      <button type="button" (click)="addUrl()">Add URL</button>
+  </form>
+
+  <div *ngIf="urlList.length > 0" class="url-list">
+      <h3>Saved URLs:</h3>
+      <ul>
+          <li *ngFor="let url of urlList">
+              <a [href]="url" target="_blank">{{ url }}</a>
+          </li>
+      </ul>
+  </div>
+</div>
