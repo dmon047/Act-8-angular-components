@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Divisibility Checker</h1>
+  <form (ngSubmit)="checkDivisibility()">
+      <div>
+          <label for="number1Input">Enter the first number:</label>
+          <input id="number1Input" type="number" [(ngModel)]="number1" name="number1" placeholder="Enter first number" required />
+      </div>
+      <div>
+          <label for="number2Input">Enter the second number:</label>
+          <input id="number2Input" type="number" [(ngModel)]="number2" name="number2" placeholder="Enter second number" required />
+      </div>
+      <button type="submit">Check Divisibility</button>
+  </form>
+
+  <!-- Display the result if available -->
+  <div *ngIf="result">
+      <h2>Result:</h2>
+      <p>{{ result }}</p>
+  </div>
+</div>
