@@ -1,0 +1,11 @@
+<div>
+  <!-- Input field for the user's name -->
+  <label for="nameInput">Enter your name:</label>
+  <input id="nameInput" type="text" [(ngModel)]="name" placeholder="Enter your name" />
+
+  <!-- Button to submit the name -->
+  <button (click)="showName()">Submit Name</button>
+
+  <!-- Display the name entered by the user -->
+  <h2 *ngIf="displayName">Hello, {{ displayName }}!</h2>
+</div>
