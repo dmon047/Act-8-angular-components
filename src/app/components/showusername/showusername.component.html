@@ -1,0 +1,16 @@
+<div>
+  <h2>Show Username</h2>
+
+  <!-- Input field and button -->
+  <div>
+      <label for="usernameInput">Enter your username:</label>
+      <input id="usernameInput" type="text" [(ngModel)]="username" name="username" placeholder="Enter your username" />
+      <button (click)="displayUsername()">Display Username</button>
+  </div>
+
+  <!-- Display the entered username -->
+  <div *ngIf="displayedUsername">
+      <h3>Your Username:</h3>
+      <p>{{ displayedUsername }}</p>
+  </div>
+</div>
