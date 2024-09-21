@@ -1,0 +1,19 @@
+<div>
+  <h2>Even or Odd Checker</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="checkEvenOdd()">
+      <div>
+          <label for="numberInput">Enter a number:</label>
+          <input id="numberInput" type="number" [(ngModel)]="number" name="numberInput" placeholder="Enter a number" required />
+      </div>
+
+      <button type="submit">Check</button>
+  </form>
+
+  <!-- Display result -->
+  <div *ngIf="result !== null">
+      <h3>Result:</h3>
+      <p>{{ result }}</p>
+  </div>
+</div>
