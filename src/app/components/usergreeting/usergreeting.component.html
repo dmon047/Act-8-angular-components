@@ -1,0 +1,18 @@
+<div>
+  <h2>Personalized Greeting</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="generateGreeting()">
+      <div>
+          <label for="name">Name:</label>
+          <input id="name" type="text" [(ngModel)]="name" name="name" placeholder="Enter your name" required />
+      </div>
+
+      <button type="submit">Greet Me</button>
+  </form>
+
+
+  <div *ngIf="greetingMessage">
+      <h3>{{ greetingMessage }}</h3>
+  </div>
+</div>
