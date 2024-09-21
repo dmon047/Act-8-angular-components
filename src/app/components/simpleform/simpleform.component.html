@@ -1,0 +1,25 @@
+<div>
+  <h2>Form Submission</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="onSubmit()">
+      <div>
+          <label for="name">Name:</label>
+          <input id="name" type="text" [(ngModel)]="name" name="name" placeholder="Enter your name" required />
+      </div>
+
+      <div>
+          <label for="email">Email:</label>
+          <input id="email" type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required />
+      </div>
+
+      <button type="submit">Submit</button>
+  </form>
+
+  <!-- Display submitted data -->
+  <div *ngIf="submittedData">
+      <h3>Submitted Data:</h3>
+      <p><strong>Name:</strong> {{ submittedData.name }}</p>
+      <p><strong>Email:</strong> {{ submittedData.email }}</p>
+  </div>
+</div>
