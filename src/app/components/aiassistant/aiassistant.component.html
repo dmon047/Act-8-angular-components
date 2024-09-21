@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>AI Assistant</h1>
+
+
+  <div>
+      <input type="text" [(ngModel)]="userInput" placeholder="Ask everything">
+      <button (click)="getResponse()">Submit</button>
+  </div>
+
+
+  <div *ngIf="response">
+      <p>{{ response }}</p>
+  </div>
+</div>
