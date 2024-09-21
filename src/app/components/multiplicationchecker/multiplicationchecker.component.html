@@ -1,0 +1,18 @@
+<div class="multiple-checker-container">
+  <h2>Multiple Checker</h2>
+
+  <form (ngSubmit)="checkMultiple()">
+      <label for="number">Number:</label>
+      <input type="number" id="number" [(ngModel)]="number" name="number" placeholder="Enter a number" required />
+
+      <label for="divisor">Divisor:</label>
+      <input type="number" id="divisor" [(ngModel)]="divisor" name="divisor" placeholder="Enter divisor" required />
+
+      <button type="submit">Check</button>
+  </form>
+
+  <!-- Display the result -->
+  <div *ngIf="isMultiple !== null">
+      <h3>{{ resultMessage }}</h3>
+  </div>
+</div>
