@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Location Finder</h1>
+
+  <!-- Input field for location -->
+  <div>
+      <input type="text" [(ngModel)]="locationInput" placeholder="Enter a location..." />
+      <button (click)="findLocation()">Find Location</button>
+  </div>
+
+  <!-- Display the location -->
+  <div *ngIf="location">
+      <p>{{ location }}</p>
+  </div>
+</div>
