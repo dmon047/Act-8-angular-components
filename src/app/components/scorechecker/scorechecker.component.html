@@ -1,0 +1,13 @@
+<div class="score-checker">
+  <h2>Score Checker</h2>
+
+  <!-- Input field for the score -->
+  <label for="scoreInput">Enter your score:</label>
+  <input id="scoreInput" type="number" [(ngModel)]="score" placeholder="Enter score" />
+
+  <!-- Button to check the score -->
+  <button (click)="checkScore()">Check Score</button>
+
+  <!-- Display the result message -->
+  <p>{{ resultMessage }}</p>
+</div>
