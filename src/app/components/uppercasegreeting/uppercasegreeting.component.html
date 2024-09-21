@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Convert Name to Uppercase</h1>
+  <form (ngSubmit)="convertToUppercase()">
+      <div>
+          <label for="nameInput">Enter your name:</label>
+          <input id="nameInput" type="text" [(ngModel)="name" name="name" placeholder="Input your name" required />
+      </div>
+      <button type="submit">Convert to Uppercase</button>
+  </form>
+  <div *ngIf="uppercaseName">
+      <h2>Your name in uppercase:</h2>
+      <p>{{ uppercaseName }}</p>
+  </div>
+</div>
