@@ -1,0 +1,15 @@
+<div class="word-counter-container">
+  <h2>Word Counter</h2>
+
+  <!-- Form to input string -->
+  <form (ngSubmit)="countWords()">
+      <label for="inputString">Enter a string:</label>
+      <input type="text" id="inputString" [(ngModel)]="inputString" name="stringInput" placeholder="Enter your string" required />
+      <button type="submit">Count Words</button>
+  </form>
+
+  <!-- Display the word count -->
+  <div *ngIf="wordCount !== null">
+      <h3>Word Count: {{ wordCount }}</h3>
+  </div>
+</div>
