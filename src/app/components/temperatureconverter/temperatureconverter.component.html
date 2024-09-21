@@ -1,0 +1,24 @@
+<div class="temperature-converter-container">
+  <h2>Temperature Converter</h2>
+
+  <form>
+      <div>
+          <label for="temperatureInput">Enter temperature:</label>
+          <input type="number" id="temperatureInput" [(ngModel)]="temperature" name="temperature" placeholder="Enter temperature" />
+      </div>
+
+      <div>
+          <label for="conversionType">Convert to:</label>
+          <select id="conversionType" [(ngModel)]="conversionType" name="conversionType">
+      <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+      <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+    </select>
+      </div>
+
+      <button type="button" (click)="convertTemperature()">Convert</button>
+  </form>
+
+  <div *ngIf="convertedTemperature !== null">
+      <h3>Converted Temperature: {{ convertedTemperature }}</h3>
+  </div>
+</div>
