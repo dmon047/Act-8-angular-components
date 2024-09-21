@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>ID Checker</h1>
+
+  <!-- Input field for ID -->
+  <div>
+      <input type="text" [(ngModel)]="idInput" placeholder="Enter ID" />
+      <button (click)="checkId()">Check ID</button>
+  </div>
+
+  <!-- Display result -->
+  <div *ngIf="isValid !== null">
+      <p *ngIf="isValid; else invalidId">The ID is valid.</p>
+      <ng-template #invalidId>
+          <p>The ID is invalid. Please enter a positive number.</p>
+      </ng-template>
+  </div>
+</div>
