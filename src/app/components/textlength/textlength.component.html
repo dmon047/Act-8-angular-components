@@ -1,0 +1,19 @@
+<div>
+  <h2>String Length Calculator</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="calculateLength()">
+      <div>
+          <label for="inputString">Enter a string:</label>
+          <input id="inputString" type="text" [(ngModel)]="inputString" name="inputString" placeholder="Enter a string" required />
+      </div>
+
+      <button type="submit">Calculate Length</button>
+  </form>
+
+  <!-- Display string length -->
+  <div *ngIf="stringLength !== null">
+      <h3>Length of the string:</h3>
+      <p>{{ stringLength }}</p>
+  </div>
+</div>
