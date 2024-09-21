@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Sum of Odd Numbers Calculator</h1>
+  <form (ngSubmit)="calculateSumOfOdds()">
+      <div>
+          <label for="number">Enter a number:</label>
+          <input type="number" id="number" [(ngModel)]="number" name="number" placeholder="Enter a number" required>
+      </div>
+      <button type="submit">Calculate Sum</button>
+  </form>
+
+  <!-- Display the sum of odd numbers if available -->
+  <h3 *ngIf="sumOfOdds !== null">Sum of odd numbers up to {{ number }} is: {{ sumOfOdds }}</h3>
+</div>
