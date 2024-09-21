@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Currency Formatter</h1>
+  <form (ngSubmit)="formatCurrency()">
+      <div>
+          <label for="amount">Enter an amount:</label>
+          <input type="number" id="amount" [(ngModel)]="amount" name="amount" placeholder="Enter amount" required>
+      </div>
+      <button type="submit">Format Currency</button>
+  </form>
+
+  <!-- Display the formatted currencies if available -->
+  <h3 *ngIf="formattedDollar">Dollar: {{ formattedDollar }}</h3>
+  <h3 *ngIf="formattedPhp">Peso: {{ formattedPhp }}</h3>
+  <h3 *ngIf="formattedEuro">Euro: {{ formattedEuro }}</h3>
+</div>
