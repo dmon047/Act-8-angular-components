@@ -1,0 +1,16 @@
+<div class="char-count-container">
+  <h2>Character Counter</h2>
+
+  <form>
+      <div>
+          <label for="inputString">Enter a string:</label>
+          <input type="text" id="inputString" [(ngModel)]="inputString" name="inputString" placeholder="Type something..." />
+      </div>
+
+      <button type="button" (click)="countCharacters()">Count Characters</button>
+  </form>
+
+  <div *ngIf="characterCount !== null">
+      <h3>Character Count: {{ characterCount }}</h3>
+  </div>
+</div>
